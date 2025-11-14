@@ -28,9 +28,9 @@ urlpatterns = [
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="My API",
+      title="IDENTIFY TARGETS API",
       default_version='v1',
-      description="Test description",
+      description="MVP backend API for managing Targets, Sources, Indicators, and Associations.",
    ),
    public=True,
    permission_classes=(permissions.AllowAny,),
@@ -51,9 +51,9 @@ def dynamic_schema_view(request, *args, **kwargs):
     url = get_full_url(request)
     view = get_schema_view(
         openapi.Info(
-            title="My API",
+            title="IDENTIFY TARGETS API",
             default_version='v1',
-            description="API Docs",
+            description="API documentation for IDENTIFY TARGETS.",
         ),
         public=True,
         url=url,
