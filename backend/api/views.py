@@ -82,7 +82,6 @@ class TargetViewSet(BaseViewSet):
         url_path="score",
         url_name="score",
         permission_classes=[permissions.AllowAny],
-        summary="Get target score",
     )
     def score(self, request, pk=None):
         """
@@ -105,7 +104,6 @@ class TargetViewSet(BaseViewSet):
         url_path="promote",
         url_name="promote",
         permission_classes=[permissions.AllowAny],
-        summary="Promote target status",
     )
     def promote(self, request, pk=None):
         """
