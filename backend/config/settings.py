@@ -140,7 +140,7 @@ X_FRAME_OPTIONS = 'ALLOWALL'
 
 # Django REST Framework configuration
 REST_FRAMEWORK = {
-    "DEFAULT_PAGINATION_CLASS": "api.views.DefaultPagination",
+    "DEFAULT_PAGINATION_CLASS": "api.pagination.DefaultPagination",
     "PAGE_SIZE": 20,
     "DEFAULT_FILTER_BACKENDS": [
         "rest_framework.filters.SearchFilter",

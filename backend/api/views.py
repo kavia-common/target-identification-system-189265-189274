@@ -1,7 +1,7 @@
 from django.db.models import QuerySet, Sum, F
 from django_filters.rest_framework import DjangoFilterBackend, FilterSet, NumberFilter, CharFilter, DateTimeFromToRangeFilter
 from rest_framework import viewsets, permissions, decorators, response, status, filters
-from rest_framework.pagination import PageNumberPagination
+from .pagination import DefaultPagination  # use dedicated module to avoid circular import
 
 from .models import Target, Source, Indicator, Association
 from .serializers import (
@@ -12,13 +12,6 @@ from .serializers import (
 )
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
-
-class DefaultPagination(PageNumberPagination):
-    """Default pagination for the API."""
-    page_size = 20
-    page_size_query_param = "page_size"
-    max_page_size = 200
 
 
 class TargetFilter(FilterSet):
